@@ -3,7 +3,7 @@ Playground in Rest Client using React
 
 
 ```
-<RestPlayground
+<ReactRestPlayground
   method={methodType}
   endPoint={apiUrl}
   headers={headerDetails}
