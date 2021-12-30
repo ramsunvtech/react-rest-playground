@@ -7,13 +7,13 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _Endpoint = _interopRequireDefault(require("@/blocks/Endpoint"));
+var _Endpoint = _interopRequireDefault(require("./components/blocks/Endpoint"));
 
-var _useFetchApi = _interopRequireDefault(require("@/hooks/useFetchApi"));
+var _useFetchApi = _interopRequireDefault(require("./hooks/useFetchApi"));
 
-var _Response = _interopRequireDefault(require("@/blocks/Result/Response"));
+var _Response = _interopRequireDefault(require("./components/blocks/Result/Response"));
 
-var _convertParams = _interopRequireDefault(require("@/utils/convert-params"));
+var _convertParams = _interopRequireDefault(require("./utils/convert-params"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

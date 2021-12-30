@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _PairFieldList = _interopRequireDefault(require("@/ui/common/PairFieldList"));
+var _PairFieldList = _interopRequireDefault(require("../../../ui/common/PairFieldList"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
