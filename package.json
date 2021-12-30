@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "dev": "webpack serve --mode development",
-    "build": "webpack --mode production --progress",
     "clean": "rm -rf node_modules",
+    "build": "webpack --mode production --progress",
     "prettier": "npx prettier --check src/**/*.js"
   },
   "keywords": [],
@@ -14,12 +14,17 @@
   "dependencies": {
     "axios": "^0.24.0",
     "prop-types": "^15.8.0",
-    "react": "^17.0.2",
     "react-ace": "^9.5.0",
-    "react-dom": "^17.0.2",
     "react-hook-form": "^7.22.5"
   },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
   "devDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
     "@babel/preset-react": "^7.16.5",
