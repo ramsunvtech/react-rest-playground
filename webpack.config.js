@@ -60,13 +60,11 @@ module.exports = {
       "@/utils": path.resolve(
         __dirname,
         "src",
-        "components",
         "utils"
       ),
       "@/hooks": path.resolve(
         __dirname,
         "src",
-        "components",
         "hooks"
       ),
     },

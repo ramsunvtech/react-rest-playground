@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Endpoint from '@/blocks/Endpoint'
 import useFetchApi from '@/hooks/useFetchApi'
 import Response from '@/blocks/Result/Response'
