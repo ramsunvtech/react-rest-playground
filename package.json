@@ -1,16 +1,33 @@
 {
   "name": "react-rest-playground",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Rest Client Playground using React",
+  "unpkg": "dist/index.js",
+  "jsdelivr": "dist/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "webpack serve --mode development",
     "clean": "rm -rf node_modules",
-    "build": "webpack --mode production --progress",
-    "prettier": "npx prettier --check src/**/*.js"
+    "build:app": "webpack --mode production --progress",
+    "build": "babel src -d dist --copy-files",
+    "prettier": "npx prettier --check src/**/*.js",
+    "build:declaration": "npx -p typescript tsc src/**/*.js --declaration --allowJs --emitDeclarationOnly --outDir types"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "react",
+    "components",
+    "postman-like-tool",
+    "rest-playground"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramsunvtech/react-rest-playground"
+  },
+  "author": {
+    "name": "Venkat.R",
+    "url": "https://www.linkedin.com/in/venkat-engineering-manager/"
+  },
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.24.0",
     "prop-types": "^15.8.0",
