@@ -1,9 +1,8 @@
 import React from 'react'
 
 // Components.
-import ReactRestPlayground, {
-  ErrorHandler,
-} from '@react-rest-playground/components'
+import ReactRestPlayground from '../src'
+import ErrorHandler from './ErrorHandler'
 
 function App() {
   return (

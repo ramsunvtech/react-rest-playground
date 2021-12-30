@@ -8,7 +8,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./example-app/index.js",
   module: {
     rules: [
       {
@@ -33,14 +33,14 @@ module.exports = {
   resolve: {
     extensions: ["*", ".js"],
     alias: {
-      "@react-rest-playground/images": path.resolve(
+      "@/images": path.resolve(
         __dirname,
         "src",
         "static",
         "assets",
         "images"
       ),
-      "@react-rest-playground/components": path.resolve(
+      "@/components": path.resolve(
         __dirname,
         "src",
         "components"
@@ -86,23 +86,17 @@ module.exports = {
     // Take Reference of HTML File.
     new HtmlWebpackPlugin({
       inject: true,
-      template: path.resolve(__dirname, "src/static/index.html"),
+      template: path.resolve(__dirname, "example-app/static/index.html"),
       APP_ROOT_ID: 'react-rest-playground',
       APP_VERSION: PACKAGE.version
     }),
 
-    // Copy all Assets, Icons to public Folder.
-    new CopyPlugin({
-      patterns: [
-        { from: "./src/static/images", to: "images" },
-      ],
-    }),
   ],
   devServer: {
     open: true,
     historyApiFallback: true,
     static: {
-      directory: "./src/static",
+      directory: "./example-app/static",
     },
     hot: true,
     port: 3000,
