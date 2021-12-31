@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '@/blocks/Result/Header'
-import CodeEditor from '@/ui/Common/CodeEditor'
+import CodeEditor from '@/ui/common/CodeEditor'
 
 function Response(props) {
   const { response = {} } = props
