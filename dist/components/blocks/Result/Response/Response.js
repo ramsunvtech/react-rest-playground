@@ -17,14 +17,14 @@ function Response(props) {
   const {
     response = {}
   } = props;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Header.default, {
-    response: response
-  }), /*#__PURE__*/_react.default.createElement(_CodeEditor.default, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    class: "response-editor"
+  }, /*#__PURE__*/_react.default.createElement(_CodeEditor.default, {
     name: 'responseEditor',
     data: response.data,
     readOnly: true,
     height: '300px'
-  }));
+  })));
 }
 
 var _default = Response;

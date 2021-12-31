@@ -5,7 +5,7 @@ function Header(props) {
 
   return (
     <>
-      <div>status: {JSON.stringify(response.status)}</div>
+      <div class="status">status: {JSON.stringify(response.status)}</div>
     </>
   )
 }

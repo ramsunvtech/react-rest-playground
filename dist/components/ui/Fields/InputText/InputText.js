@@ -14,11 +14,15 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function InputText(props) {
   const {
     name,
+    endPoint,
     placeholder,
+    className,
     register
   } = props;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("input", _extends({
     type: "text",
+    className: className,
+    value: endPoint,
     placeholder: placeholder
   }, register(name))));
 }

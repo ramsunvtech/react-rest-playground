@@ -38,50 +38,40 @@ function useFetchApi(endpointData, onComplete) {
   (0, _react.useEffect)(() => {
     if (method === 'get') {
       api.get(url, query).then(function (response) {
-        console.log(response);
         onComplete(response);
       }).catch(function (error) {
-        console.log(error);
         onComplete(error.response);
       });
     }
 
     if (method === 'post') {
       api.post(url, body).then(function (response) {
-        console.log(response);
         onComplete(response);
       }).catch(function (error) {
-        console.log(error);
         onComplete(error.response);
       });
     }
 
     if (method === 'patch') {
       api.patch(url, body).then(function (response) {
-        console.log(response);
         onComplete(response);
       }).catch(function (error) {
-        console.log(error);
         onComplete(error.response);
       });
     }
 
     if (method === 'put') {
       api.put(url, body).then(function (response) {
-        console.log(response);
         onComplete(response);
       }).catch(function (error) {
-        console.log(error);
         onComplete(error.response);
       });
     }
 
     if (method === 'delete') {
       api.delete(url).then(function (response) {
-        console.log(response);
         onComplete(response);
       }).catch(function (error) {
-        console.log(error);
         onComplete(error.response);
       });
     }

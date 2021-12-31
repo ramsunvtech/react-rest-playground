@@ -18,7 +18,7 @@ function BodyParams(props) {
   } = props;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_PairFieldList.default, {
     name: 'bodyParams',
-    type: 'Body',
+    type: 'body',
     register: register,
     control: control
   }));

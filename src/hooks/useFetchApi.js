@@ -26,11 +26,9 @@ export default function useFetchApi(endpointData, onComplete) {
       api
         .get(url, query)
         .then(function (response) {
-          console.log(response)
           onComplete(response)
         })
         .catch(function (error) {
-          console.log(error)
           onComplete(error.response)
         })
     }
@@ -38,11 +36,9 @@ export default function useFetchApi(endpointData, onComplete) {
       api
         .post(url, body)
         .then(function (response) {
-          console.log(response)
           onComplete(response)
         })
         .catch(function (error) {
-          console.log(error)
           onComplete(error.response)
         })
     }
@@ -50,11 +46,9 @@ export default function useFetchApi(endpointData, onComplete) {
       api
         .patch(url, body)
         .then(function (response) {
-          console.log(response)
           onComplete(response)
         })
         .catch(function (error) {
-          console.log(error)
           onComplete(error.response)
         })
     }
@@ -62,11 +56,9 @@ export default function useFetchApi(endpointData, onComplete) {
       api
         .put(url, body)
         .then(function (response) {
-          console.log(response)
           onComplete(response)
         })
         .catch(function (error) {
-          console.log(error)
           onComplete(error.response)
         })
     }
@@ -74,11 +66,9 @@ export default function useFetchApi(endpointData, onComplete) {
       api
         .delete(url)
         .then(function (response) {
-          console.log(response)
           onComplete(response)
         })
         .catch(function (error) {
-          console.log(error)
           onComplete(error.response)
         })
     }

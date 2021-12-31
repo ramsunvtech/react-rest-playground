@@ -8,7 +8,7 @@ function QueryParams(props) {
     <>
       <PairFieldList
         name={'queryParams'}
-        type={'Query'}
+        type={'query'}
         register={register}
         control={control}
       />

@@ -27,10 +27,14 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   resolve: {
-    extensions: ['*', '.js'],
+    extensions: ["*", ".js", ".css"],
     alias: {
       '@/images': path.resolve(
         __dirname,
@@ -65,6 +69,11 @@ module.exports = {
         __dirname,
         'src',
         'hooks'
+      ),
+      "@/styles": path.resolve(
+        __dirname,
+        "src",
+        "styles"
       ),
     },
   },

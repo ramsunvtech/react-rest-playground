@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactHookForm = require("react-hook-form");
 
+var _PairFieldListModule = _interopRequireDefault(require("../../../../styles/PairFieldList.module.css"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -28,7 +30,13 @@ function PairFieldList(props) {
     control,
     name: name
   });
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, fields.map(({
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: _PairFieldListModule.default.pairfield
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    type: "button",
+    className: _PairFieldListModule.default["add-button"],
+    onClick: () => append({})
+  }, "Add ", type), fields.map(({
     id,
     key,
     value
@@ -37,18 +45,18 @@ function PairFieldList(props) {
       key: id
     }, /*#__PURE__*/_react.default.createElement("input", _extends({
       type: "text",
-      defaultValue: key
+      defaultValue: key,
+      className: _PairFieldListModule.default.textbox
     }, register(`${name}[${index}].key`))), /*#__PURE__*/_react.default.createElement("input", _extends({
       type: "text",
-      defaultValue: value
+      defaultValue: value,
+      className: _PairFieldListModule.default.textbox
     }, register(`${name}[${index}].value`))), /*#__PURE__*/_react.default.createElement("button", {
       type: "button",
+      className: _PairFieldListModule.default["remove-button"],
       onClick: () => remove(index)
     }, "Remove"));
-  }), /*#__PURE__*/_react.default.createElement("button", {
-    type: "button",
-    onClick: () => append({})
-  }, "Add ", type));
+  }));
 }
 
 var _default = PairFieldList;

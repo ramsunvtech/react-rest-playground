@@ -20,7 +20,8 @@ module.exports = {
         '@/blocks': getAliasPath('components/blocks'),
         '@/ui': getAliasPath('components/ui'),
         '@/hooks': getAliasPath('hooks'),
-        '@/utils': getAliasPath('utils')
+        '@/utils': getAliasPath('utils'),
+        '@/styles': getAliasPath('styles')
       }
     }]
   ]
