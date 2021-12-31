@@ -7,11 +7,11 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _InputText = _interopRequireDefault(require("../../ui/Fields/InputText"));
+var _InputText = _interopRequireDefault(require("../../ui/fields/InputText"));
 
-var _ActionButtons = _interopRequireDefault(require("../../ui/Fields/ActionButtons"));
+var _ActionButtons = _interopRequireDefault(require("../../ui/fields/ActionButtons"));
 
-var _DropDown = _interopRequireDefault(require("../../ui/Fields/DropDown"));
+var _DropDown = _interopRequireDefault(require("../../ui/fields/DropDown"));
 
 var _httpMethods = require("../../../utils/http-methods");
 
