@@ -13,7 +13,8 @@
     "build": "babel src -d dist --copy-files",
     "build:declaration": "npx -p typescript tsc src/**/*.js --declaration --allowJs --emitDeclarationOnly --outDir types",
     "lint": "npx eslint --fix .",
-    "format": "npx prettier --check src/**/*.js"
+    "format": "npx prettier --check src/**/*.js",
+    "pre-commit": "lint-staged"
   },
   "keywords": [
     "react",
@@ -62,6 +63,8 @@
     "css-loader": "^6.5.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.0",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -75,5 +78,11 @@
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write"
+    ]
+  }
 }
