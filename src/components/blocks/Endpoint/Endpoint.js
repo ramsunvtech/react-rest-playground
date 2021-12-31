@@ -14,7 +14,7 @@ function Endpoint(props) {
         <DropDown name="method" register={register} options={methods} />
         <InputText
           placeholder="ex: http://localhost:3000/api/users"
-          name={'url'}
+          name="url"
           register={register}
         />
         <ActionButtons>Submit</ActionButtons>

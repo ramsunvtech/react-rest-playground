@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from '@/blocks/Result/Header'
 import CodeEditor from '@/ui/common/CodeEditor'
 
 function Response(props) {

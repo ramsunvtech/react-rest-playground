@@ -11,9 +11,9 @@
     "clean": "rm -rf node_modules",
     "build:app": "webpack --mode production --progress",
     "build": "babel src -d dist --copy-files",
-    "prettier": "npx prettier --check src/**/*.js",
     "build:declaration": "npx -p typescript tsc src/**/*.js --declaration --allowJs --emitDeclarationOnly --outDir types",
-    "eslint": "npx eslint --fix ."
+    "lint": "npx eslint --fix .",
+    "format": "npx prettier --check src/**/*.js"
   },
   "keywords": [
     "react",
