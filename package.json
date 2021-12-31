@@ -1,10 +1,11 @@
 {
   "name": "react-rest-playground",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Rest Client Playground using React",
   "unpkg": "dist/index.js",
   "jsdelivr": "dist/index.js",
   "main": "dist/index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "dev": "webpack serve --mode development",
     "clean": "rm -rf node_modules",
