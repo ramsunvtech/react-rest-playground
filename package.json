@@ -28,6 +28,10 @@
     "name": "Venkat.R",
     "url": "https://www.linkedin.com/in/venkat-engineering-manager/"
   },
+  "contributors": [
+    "Yogesh <yogkumit@gmail.com>"
+    "Yuvaraj Ravi <yuvaraj.ravi2@gmail.com>"
+  ],
   "license": "MIT",
   "dependencies": {
     "axios": "^0.24.0",
@@ -37,7 +41,7 @@
     "react-hook-form": "^7.22.5"
   },
   "peerDependencies": {
-    "react": "*",
+    "react": ">= 16.8",
     "react-dom": "*"
   },
   "devDependencies": {
@@ -57,5 +61,11 @@
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.1"
-  }
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
