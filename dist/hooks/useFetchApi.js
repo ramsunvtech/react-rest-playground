@@ -21,9 +21,6 @@ function useFetchApi(endpointData, onComplete) {
     queryParams,
     bodyParams
   } = endpointData;
-  const query = {
-    params: queryParams
-  };
 
   const body = _qs.default.stringify(bodyParams);
 
@@ -36,44 +33,27 @@ function useFetchApi(endpointData, onComplete) {
   });
 
   (0, _react.useEffect)(() => {
-    if (method === 'get') {
-      api.get(url, query).then(function (response) {
-        onComplete(response);
-      }).catch(function (error) {
-        onComplete(error.response);
-      });
+    const apiMethod = api[method];
+
+    if (!apiMethod) {
+      return;
     }
 
-    if (method === 'post') {
-      api.post(url, body).then(function (response) {
-        onComplete(response);
-      }).catch(function (error) {
-        onComplete(error.response);
-      });
-    }
-
-    if (method === 'patch') {
-      api.patch(url, body).then(function (response) {
-        onComplete(response);
-      }).catch(function (error) {
-        onComplete(error.response);
-      });
-    }
-
-    if (method === 'put') {
-      api.put(url, body).then(function (response) {
-        onComplete(response);
-      }).catch(function (error) {
-        onComplete(error.response);
-      });
-    }
-
-    if (method === 'delete') {
-      api.delete(url).then(function (response) {
-        onComplete(response);
-      }).catch(function (error) {
-        onComplete(error.response);
-      });
-    }
-  }, [endpointData]);
+    const query = {
+      params: queryParams
+    };
+    const apiParameters = {
+      get: query,
+      post: body,
+      patch: body,
+      put: body,
+      delete: undefined
+    };
+    const params = apiParameters[method];
+    apiMethod(url, params).then(function (response) {
+      onComplete(response);
+    }).catch(function (error) {
+      onComplete(error.response);
+    });
+  }, [api, method, onComplete, url, body, queryParams]);
 }

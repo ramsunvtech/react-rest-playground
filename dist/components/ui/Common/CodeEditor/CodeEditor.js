@@ -24,6 +24,7 @@ function CodeEditor(props) {
     height
   } = props;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactAce.default, {
+    "data-test-id": "AceEditor",
     mode: "json",
     theme: "github",
     name: name,

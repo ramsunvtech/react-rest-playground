@@ -17,6 +17,7 @@ function BodyParams(props) {
     register
   } = props;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_PairFieldList.default, {
+    "data-test-id": "BodyPairFieldList",
     name: 'bodyParams',
     type: 'body',
     register: register,

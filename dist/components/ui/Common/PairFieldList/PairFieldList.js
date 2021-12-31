@@ -32,11 +32,7 @@ function PairFieldList(props) {
   });
   return /*#__PURE__*/_react.default.createElement("div", {
     className: _PairFieldListModule.default.pairfield
-  }, /*#__PURE__*/_react.default.createElement("button", {
-    type: "button",
-    className: _PairFieldListModule.default["add-button"],
-    onClick: () => append({})
-  }, "Add ", type), fields.map(({
+  }, fields.map(({
     id,
     key,
     value
@@ -53,10 +49,14 @@ function PairFieldList(props) {
       className: _PairFieldListModule.default.textbox
     }, register(`${name}[${index}].value`))), /*#__PURE__*/_react.default.createElement("button", {
       type: "button",
-      className: _PairFieldListModule.default["remove-button"],
+      className: _PairFieldListModule.default.removeButton,
       onClick: () => remove(index)
     }, "Remove"));
-  }));
+  }), /*#__PURE__*/_react.default.createElement("button", {
+    type: "button",
+    className: _PairFieldListModule.default.addButton,
+    onClick: () => append({})
+  }, "Add ", type));
 }
 
 var _default = PairFieldList;

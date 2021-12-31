@@ -17,6 +17,7 @@ function HeaderParams(props) {
     register
   } = props;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_PairFieldList.default, {
+    "data-test-id": "HeaderPairFieldList",
     name: 'headerParams',
     type: 'header',
     register: register,

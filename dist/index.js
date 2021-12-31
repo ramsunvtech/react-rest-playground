@@ -19,7 +19,7 @@ var _useFetchApi = _interopRequireDefault(require("./hooks/useFetchApi"));
 
 var _convertParams = _interopRequireDefault(require("./utils/convert-params"));
 
-var _globals = _interopRequireDefault(require("./styles/globals.css"));
+require("./styles/globals.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -41,10 +41,7 @@ function ReactRestPlayground(props) {
   const {
     register,
     handleSubmit,
-    control,
-    formState: {
-      errors
-    }
+    control
   } = (0, _reactHookForm.useForm)({
     defaultValues: {
       method: method,
@@ -71,17 +68,20 @@ function ReactRestPlayground(props) {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "flex flexColumn"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "flex flexRow justify-center"
+    className: "flex flexRow justifyCenter"
   }, /*#__PURE__*/_react.default.createElement("form", {
     onSubmit: handleSubmit(onSubmit)
   }, /*#__PURE__*/_react.default.createElement(_Endpoint.default, {
+    "data-test-id": "Endpoint",
     register: register
   }), /*#__PURE__*/_react.default.createElement(_InputParams.default, {
+    "data-test-id": "InputParams",
     register: register,
     control: control
   }))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "flex flexRow justify-center"
+    className: "flex flexRow justifyCenter"
   }, /*#__PURE__*/_react.default.createElement(_Result.default, {
+    "data-test-id": "Result",
     response: responseData
   }))));
 }

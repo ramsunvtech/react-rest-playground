@@ -26,12 +26,14 @@ function Endpoint(props) {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: _EndPointModule.default.endpoint
   }, /*#__PURE__*/_react.default.createElement(_DropDown.default, {
+    "data-test-id": "EndpointDropDown",
     name: "method",
     register: register,
     options: _httpMethods.methods
   }), /*#__PURE__*/_react.default.createElement(_InputText.default, {
+    "data-test-id": "EndpointInputText",
     placeholder: "ex: http://localhost:3000/api/users",
-    name: 'url',
+    name: "url",
     register: register
   }), /*#__PURE__*/_react.default.createElement(_ActionButtons.default, null, "Submit")));
 }
