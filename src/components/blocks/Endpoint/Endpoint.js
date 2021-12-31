@@ -14,7 +14,6 @@ function Endpoint(props) {
     register,
     handleSubmit,
     control,
-    formState: { errors },
   } = useForm()
 
   return (
