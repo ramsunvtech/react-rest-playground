@@ -7,13 +7,14 @@ function Response(props) {
 
   return (
     <>
-      <Header response={response} />
-      <CodeEditor
-        name={'responseEditor'}
-        data={response.data}
-        readOnly={true}
-        height={'300px'}
-      />
+      <div class="response-editor">
+        <CodeEditor
+          name={'responseEditor'}
+          data={response.data}
+          readOnly={true}
+          height={'300px'}
+        />
+      </div>
     </>
   )
 }

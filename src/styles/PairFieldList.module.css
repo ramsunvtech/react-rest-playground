@@ -1,0 +1,20 @@
+.removeButton {
+  background-color: #cd0909;
+  border: 1px solid #cd0909 ;
+}
+
+.removeButton:hover {
+  background-color: #e71818;
+  border: 1px solid #e71818 ;
+}
+
+.textbox {
+  margin-right: 0.3rem;
+  margin-bottom: 0.3rem;
+  min-width: 22rem !important;
+}
+
+.addButton {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}

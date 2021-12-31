@@ -1,10 +1,11 @@
 import React from 'react'
 
 function InputText(props) {
-  const { name, placeholder, register } = props
+  const { name, endPoint, placeholder, className, register } = props
+
   return (
     <>
-      <input type="text" placeholder={placeholder} {...register(name)} />
+      <input type="text" className={className} value={endPoint} placeholder={placeholder} {...register(name)} />
     </>
   )
 }

@@ -18,7 +18,7 @@ function QueryParams(props) {
   } = props;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_PairFieldList.default, {
     name: 'queryParams',
-    type: 'Query',
+    type: 'query',
     register: register,
     control: control
   }));

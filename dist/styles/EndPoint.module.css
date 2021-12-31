@@ -1,0 +1,16 @@
+.endpoint {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.endpoint select {
+  margin-right: 0.30rem;
+}
+
+.endpoint button {
+  margin-left: 0.30rem;
+}
+
+.endpoint input {
+  min-width: 38rem !important;
+}

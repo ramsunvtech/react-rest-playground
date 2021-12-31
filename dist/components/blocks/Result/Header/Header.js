@@ -13,7 +13,9 @@ function Header(props) {
   const {
     response = {}
   } = props;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", null, "status: ", JSON.stringify(response.status)));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    class: "status"
+  }, "status: ", JSON.stringify(response.status)));
 }
 
 var _default = Header;

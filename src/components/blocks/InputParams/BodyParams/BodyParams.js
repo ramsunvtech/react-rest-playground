@@ -8,7 +8,7 @@ function BodyParams(props) {
     <>
       <PairFieldList
         name={'bodyParams'}
-        type={'Body'}
+        type={'body'}
         register={register}
         control={control}
       />
