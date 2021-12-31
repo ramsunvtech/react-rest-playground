@@ -7,9 +7,8 @@ Playground in Rest Client using React
   method={methodType}
   endPoint={apiUrl}
   headers={headerDetails}
-  parameters={parametersetails}
+  query={queryParamDetails}
   body={bodyDetails}
   onSend={() => {}}
-  onSave={() => {}}
 />
 ```

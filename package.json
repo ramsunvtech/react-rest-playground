@@ -1,6 +1,6 @@
 {
   "name": "react-rest-playground",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Rest Client Playground using React",
   "unpkg": "dist/index.js",
   "jsdelivr": "dist/index.js",
