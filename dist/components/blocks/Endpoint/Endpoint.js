@@ -7,21 +7,21 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _InputText = _interopRequireDefault(require("@/ui/Fields/InputText"));
+var _InputText = _interopRequireDefault(require("../../ui/Fields/InputText"));
 
-var _ActionButtons = _interopRequireDefault(require("@/ui/Fields/ActionButtons"));
+var _ActionButtons = _interopRequireDefault(require("../../ui/Fields/ActionButtons"));
 
-var _DropDown = _interopRequireDefault(require("@/ui/Fields/DropDown"));
+var _DropDown = _interopRequireDefault(require("../../ui/Fields/DropDown"));
 
-var _httpMethods = require("@/utils/http-methods");
+var _httpMethods = require("../../../utils/http-methods");
 
 var _reactHookForm = require("react-hook-form");
 
-var _BodyParams = _interopRequireDefault(require("@/blocks/InputParams/BodyParams"));
+var _BodyParams = _interopRequireDefault(require("../InputParams/BodyParams"));
 
-var _HeaderParams = _interopRequireDefault(require("@/blocks/InputParams/HeaderParams"));
+var _HeaderParams = _interopRequireDefault(require("../InputParams/HeaderParams"));
 
-var _QueryParams = _interopRequireDefault(require("@/blocks/InputParams/QueryParams"));
+var _QueryParams = _interopRequireDefault(require("../InputParams/QueryParams"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

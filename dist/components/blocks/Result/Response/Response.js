@@ -7,9 +7,9 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _Header = _interopRequireDefault(require("@/blocks/Result/Header"));
+var _Header = _interopRequireDefault(require("../Header"));
 
-var _CodeEditor = _interopRequireDefault(require("@/ui/Common/CodeEditor"));
+var _CodeEditor = _interopRequireDefault(require("../../../ui/Common/CodeEditor"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
