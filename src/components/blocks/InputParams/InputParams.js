@@ -8,16 +8,16 @@ function InputParams(props) {
   const { register, control } = props
 
   return (
-    <Tabs>
-      <Tabs.Item id="query" title="Query Params">
+    <Tabs data-test-id="Tabs" id="Tabs">
+      <Tabs.Item data-test-id="query" id="query" title="Query Params">
         <p>Query Params</p>
         <QueryParams register={register} control={control} />
       </Tabs.Item>
-      <Tabs.Item id="header" title="Headers">
+      <Tabs.Item data-test-id="header" id="header" title="Headers">
         <p>Header Params</p>
         <HeaderParams register={register} control={control} />
       </Tabs.Item>
-      <Tabs.Item id="body" title="Body">
+      <Tabs.Item data-test-id="body" id="body" title="Body">
         <p>Body Params</p>
         <BodyParams register={register} control={control} />
       </Tabs.Item>

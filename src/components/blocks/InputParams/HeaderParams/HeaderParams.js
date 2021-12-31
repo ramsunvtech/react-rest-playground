@@ -7,6 +7,7 @@ function HeaderParams(props) {
   return (
     <>
       <PairFieldList
+        data-test-id="HeaderPairFieldList"
         name={'headerParams'}
         type={'header'}
         register={register}

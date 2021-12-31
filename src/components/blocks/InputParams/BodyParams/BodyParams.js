@@ -7,6 +7,7 @@ function BodyParams(props) {
   return (
     <>
       <PairFieldList
+        data-test-id="BodyPairFieldList"
         name={'bodyParams'}
         type={'body'}
         register={register}

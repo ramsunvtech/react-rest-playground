@@ -9,6 +9,7 @@ function CodeEditor(props) {
   return (
     <>
       <AceEditor
+        data-test-id="AceEditor"
         mode="json"
         theme="github"
         name={name}

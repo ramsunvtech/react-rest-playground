@@ -11,18 +11,14 @@ function ReactRestPlayground(props) {
   const { method, endPoint, headers, query, body, onSend } = props
   const [requestData, setRequestData] = useState({})
   const [responseData, setResponseData] = useState({})
-  const {
-    register,
-    handleSubmit,
-    control,
-  } = useForm({
+  const { register, handleSubmit, control } = useForm({
     defaultValues: {
       method: method,
       url: endPoint,
       queryParams: query,
       headerParams: headers,
       bodyParams: body,
-    }
+    },
   })
 
   // Api call
@@ -45,12 +41,16 @@ function ReactRestPlayground(props) {
       <div className="flex flexColumn">
         <div className="flex flexRow justifyCenter">
           <form onSubmit={handleSubmit(onSubmit)}>
-            <Endpoint register={register} />
-            <InputParams register={register} control={control}/>
+            <Endpoint data-test-id="Endpoint" register={register} />
+            <InputParams
+              data-test-id="InputParams"
+              register={register}
+              control={control}
+            />
           </form>
         </div>
-        <div  className="flex flexRow justifyCenter">
-          <Result response={responseData} />
+        <div className="flex flexRow justifyCenter">
+          <Result data-test-id="Result" response={responseData} />
         </div>
       </div>
     </>

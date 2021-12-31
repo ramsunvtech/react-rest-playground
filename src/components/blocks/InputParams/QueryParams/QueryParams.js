@@ -7,6 +7,7 @@ function QueryParams(props) {
   return (
     <>
       <PairFieldList
+        data-test-id="PairFieldList"
         name={'queryParams'}
         type={'query'}
         register={register}

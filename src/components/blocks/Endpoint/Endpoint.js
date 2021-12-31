@@ -11,8 +11,14 @@ function Endpoint(props) {
   return (
     <>
       <div className={styles.endpoint}>
-        <DropDown name="method" register={register} options={methods} />
+        <DropDown
+          data-test-id="EndpointDropDown"
+          name="method"
+          register={register}
+          options={methods}
+        />
         <InputText
+          data-test-id="EndpointInputText"
           placeholder="ex: http://localhost:3000/api/users"
           name="url"
           register={register}
