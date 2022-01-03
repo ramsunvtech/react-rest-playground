@@ -5,8 +5,7 @@ import Result from '@/blocks/Result'
 import { useForm } from 'react-hook-form'
 import useFetchApi from '@/hooks/useFetchApi'
 import convertParams from '@/utils/convert-params'
-
-import './styles/main.css'
+import { FlexColumn, FlexRow } from '@/styled/general'
 
 function ReactRestPlayground(props) {
   const { method, endPoint, headers, query, body, onSend } = props
@@ -39,8 +38,8 @@ function ReactRestPlayground(props) {
 
   return (
     <>
-      <div className="flex flexColumn">
-        <div className="flex flexRow justifyCenter">
+      <FlexColumn>
+        <FlexRow justify="center">
           <form onSubmit={handleSubmit(onSubmit)}>
             <Endpoint data-test-id="Endpoint" register={register} />
             <InputParams
@@ -49,11 +48,11 @@ function ReactRestPlayground(props) {
               control={control}
             />
           </form>
-        </div>
-        <div className="flex flexRow justifyCenter">
+        </FlexRow>
+        <FlexRow justify="center">
           <Result data-test-id="Result" response={responseData} />
-        </div>
-      </div>
+        </FlexRow>
+      </FlexColumn>
     </>
   )
 }
