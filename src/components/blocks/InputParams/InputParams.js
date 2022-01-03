@@ -10,15 +10,12 @@ function InputParams(props) {
   return (
     <Tabs data-test-id="Tabs" id="Tabs">
       <Tabs.Item data-test-id="query" id="query" title="Query Params">
-        <p>Query Params</p>
         <QueryParams register={register} control={control} />
       </Tabs.Item>
       <Tabs.Item data-test-id="header" id="header" title="Headers">
-        <p>Header Params</p>
         <HeaderParams register={register} control={control} />
       </Tabs.Item>
       <Tabs.Item data-test-id="body" id="body" title="Body">
-        <p>Body Params</p>
         <BodyParams register={register} control={control} />
       </Tabs.Item>
     </Tabs>

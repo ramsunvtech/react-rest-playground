@@ -2,15 +2,15 @@ import React from 'react'
 import InputText from '@/ui/fields/InputText'
 import ActionButtons from '@/ui/fields/ActionButtons'
 import DropDown from '@/ui/fields/DropDown'
+import { EndpointBlock } from '@/styled/blocks'
 import { methods } from '@/utils/http-methods'
-import styles from '@/styles/EndPoint.module.css'
 
 function Endpoint(props) {
   const { register } = props
 
   return (
     <>
-      <div className={styles.endpoint}>
+      <EndpointBlock>
         <DropDown
           data-test-id="EndpointDropDown"
           name="method"
@@ -24,7 +24,7 @@ function Endpoint(props) {
           register={register}
         />
         <ActionButtons>Submit</ActionButtons>
-      </div>
+      </EndpointBlock>
     </>
   )
 }

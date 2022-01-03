@@ -1,11 +1,12 @@
 import React from 'react'
+import { StyledTextBox } from '@/styled/general'
 
 function InputText(props) {
-  const { name, endPoint, placeholder, className, register } = props
+  const { name, endPoint, placeholder, register } = props
 
   return (
     <>
-      <input type="text" className={className} value={endPoint} placeholder={placeholder} {...register(name)} />
+      <StyledTextBox value={endPoint} placeholder={placeholder} {...register(name)} />
     </>
   )
 }

@@ -19,10 +19,12 @@ module.exports = {
       alias: {
         '@/blocks': getAliasPath('components/blocks'),
         '@/ui': getAliasPath('components/ui'),
+        '@/styled': getAliasPath('components/styled'),
         '@/hooks': getAliasPath('hooks'),
         '@/utils': getAliasPath('utils'),
         '@/styles': getAliasPath('styles')
       }
-    }]
+    }],
+    ['styled-components']
   ]
 }

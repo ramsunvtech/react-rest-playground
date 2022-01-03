@@ -6,12 +6,12 @@ function Response(props) {
 
   return (
     <>
-      <div class="response-editor">
+      <div data-testid="response-editor">
         <CodeEditor
           name={'responseEditor'}
           data={response.data}
-          readOnly={true}
           height={'300px'}
+          readOnly
         />
       </div>
     </>
