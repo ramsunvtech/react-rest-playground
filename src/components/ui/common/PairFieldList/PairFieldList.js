@@ -1,5 +1,6 @@
 import React from 'react'
 import { useFieldArray } from 'react-hook-form'
+import { PairFieldBlock, StyledRemoveButton, StyledInputField, StyledAddButton } from '@/styled/blocks'
 
 function PairFieldList(props) {
   const { name, type, control, register } = props
@@ -9,40 +10,36 @@ function PairFieldList(props) {
   })
 
   return (
-    <div data-testid="pair-field">
+    <PairFieldBlock>
       {fields.map(({ id, key, value }, index) => {
         return (
           <div key={id}>
-            <input
+            <StyledInputField
               type="text"
               defaultValue={key}
-              className="textbox"
               {...register(`${name}[${index}].key`)}
             />
-            <input
+            <StyledInputField
               type="text"
               defaultValue={value}
-              className="textbox"
               {...register(`${name}[${index}].value`)}
             />
-            <button
+            <StyledRemoveButton
               type="button"
-              className="removeButton"
               onClick={() => remove(index)}
             >
               Remove
-            </button>
+            </StyledRemoveButton>
           </div>
         )
       })}
-      <button
+      <StyledAddButton
         type="button"
-        className="addButton"
         onClick={() => append({})}
       >
         Add {type}
-      </button>
-    </div>
+      </StyledAddButton>
+    </PairFieldBlock>
   )
 }
 

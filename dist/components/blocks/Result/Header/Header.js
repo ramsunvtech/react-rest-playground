@@ -14,7 +14,7 @@ function Header(props) {
     response = {}
   } = props;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
-    class: "status"
+    "data-testid": "status"
   }, "status: ", JSON.stringify(response.status)));
 }
 

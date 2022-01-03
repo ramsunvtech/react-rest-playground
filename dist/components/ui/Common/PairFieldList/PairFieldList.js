@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactHookForm = require("react-hook-form");
 
+var _blocks = require("../../../styled/blocks");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -28,31 +30,25 @@ function PairFieldList(props) {
     control,
     name: name
   });
-  return /*#__PURE__*/_react.default.createElement("div", {
-    "data-testid": "pair-field"
-  }, fields.map(({
+  return /*#__PURE__*/_react.default.createElement(_blocks.PairFieldBlock, null, fields.map(({
     id,
     key,
     value
   }, index) => {
     return /*#__PURE__*/_react.default.createElement("div", {
       key: id
-    }, /*#__PURE__*/_react.default.createElement("input", _extends({
+    }, /*#__PURE__*/_react.default.createElement(_blocks.StyledInputField, _extends({
       type: "text",
-      defaultValue: key,
-      className: "textbox"
-    }, register(`${name}[${index}].key`))), /*#__PURE__*/_react.default.createElement("input", _extends({
+      defaultValue: key
+    }, register(`${name}[${index}].key`))), /*#__PURE__*/_react.default.createElement(_blocks.StyledInputField, _extends({
       type: "text",
-      defaultValue: value,
-      className: "textbox"
-    }, register(`${name}[${index}].value`))), /*#__PURE__*/_react.default.createElement("button", {
+      defaultValue: value
+    }, register(`${name}[${index}].value`))), /*#__PURE__*/_react.default.createElement(_blocks.StyledRemoveButton, {
       type: "button",
-      className: "removeButton",
       onClick: () => remove(index)
     }, "Remove"));
-  }), /*#__PURE__*/_react.default.createElement("button", {
+  }), /*#__PURE__*/_react.default.createElement(_blocks.StyledAddButton, {
     type: "button",
-    className: "addButton",
     onClick: () => append({})
   }, "Add ", type));
 }

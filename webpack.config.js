@@ -60,6 +60,12 @@ module.exports = {
         'components',
         'ui'
       ),
+      '@/styled': path.resolve(
+        __dirname,
+        'src',
+        'components',
+        'styled'
+      ),
       '@/utils': path.resolve(
         __dirname,
         'src',

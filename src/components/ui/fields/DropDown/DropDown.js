@@ -1,11 +1,12 @@
 import React from 'react'
+import { StyledDropDown } from '@/styled/general'
 
 function DropDown(props) {
   const { name, method, options, register } = props
 
   return (
     <>
-      <select value={method} {...register(name)}>
+      <StyledDropDown value={method} {...register(name)}>
         {options.map((option, index) => {
           return (
             <option key={index} value={option.value}>
@@ -13,7 +14,7 @@ function DropDown(props) {
             </option>
           )
         })}
-      </select>
+      </StyledDropDown>
     </>
   )
 }

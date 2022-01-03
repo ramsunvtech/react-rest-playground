@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { TabList, TabListItem } from '@/styled/tabs'
 
 function Tabs(props) {
   const { children, defaultTabIndex = 0 } = props
@@ -9,22 +10,22 @@ function Tabs(props) {
   }
 
   return (
-    <div className="tabs">
-      <ul className="tab-list">
+    <div data-testid="tabs">
+      <TabList>
         {children.map(({ props: { id, title } }, tabIndex) => (
-          <li
+          <TabListItem
             key={id}
             id={id}
-            className={tabIndex === activeTabIndex ? 'active' : ''}
+            isActive={tabIndex === activeTabIndex}
             onClick={() => {
               onChangeTabEvent(tabIndex)
             }}
           >
             {title}
-          </li>
+          </TabListItem>
         ))}
-      </ul>
-      <div className={'tab-content'}>
+      </TabList>
+      <div data-testid="tab-content">
         {children.length > 0 && children[activeTabIndex]}
       </div>
     </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import InputText from '@/ui/fields/InputText'
 import ActionButtons from '@/ui/fields/ActionButtons'
 import DropDown from '@/ui/fields/DropDown'
+import { EndpointBlock } from '@/styled/blocks'
 import { methods } from '@/utils/http-methods'
 
 function Endpoint(props) {
@@ -9,7 +10,7 @@ function Endpoint(props) {
 
   return (
     <>
-      <div className="endpoint">
+      <EndpointBlock>
         <DropDown
           data-test-id="EndpointDropDown"
           name="method"
@@ -23,7 +24,7 @@ function Endpoint(props) {
           register={register}
         />
         <ActionButtons>Submit</ActionButtons>
-      </div>
+      </EndpointBlock>
     </>
   )
 }
