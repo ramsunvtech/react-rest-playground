@@ -16,12 +16,12 @@ function Response(props) {
     response = {}
   } = props;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
-    class: "response-editor"
+    "data-testid": "response-editor"
   }, /*#__PURE__*/_react.default.createElement(_CodeEditor.default, {
     name: 'responseEditor',
     data: response.data,
-    readOnly: true,
-    height: '300px'
+    height: '300px',
+    readOnly: true
   })));
 }
 

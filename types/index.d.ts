@@ -1,2 +1,2 @@
 export default ReactRestPlayground;
-declare function ReactRestPlayground(): any;
+declare function ReactRestPlayground(props: any): any;
