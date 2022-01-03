@@ -4,6 +4,9 @@ import React from 'react'
 import ReactRestPlayground from '../src'
 import ErrorHandler from './ErrorHandler'
 
+// CSS.
+import '../src/styles/main.css'
+
 // Props.
 const methodType = 'get'
 const apiUrl = 'https://jsonplaceholder.typicode.com/todos/1'

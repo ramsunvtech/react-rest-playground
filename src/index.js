@@ -5,7 +5,6 @@ import Result from '@/blocks/Result'
 import { useForm } from 'react-hook-form'
 import useFetchApi from '@/hooks/useFetchApi'
 import convertParams from '@/utils/convert-params'
-import '@/styles/globals.css'
 
 function ReactRestPlayground(props) {
   const { method, endPoint, headers, query, body, onSend } = props

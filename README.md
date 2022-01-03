@@ -1,5 +1,7 @@
 # react-rest-playground
-Playground in Rest Client using React
+Embed API Explorer in your React App as component.
+
+![React Rest Playground](react-rest-playground-demo.png "React Rest Playground")
 
 
 ```
@@ -12,3 +14,7 @@ Playground in Rest Client using React
   onSend={() => {}}
 />
 ```
+
+## Demo
+1. In React Project - https://codesandbox.io/s/react-rest-playground-example-in-react-js-project-d18zu
+1. In React Typescript Project - https://codesandbox.io/s/react-rest-playground-example-in-react-tsx-nftcl
