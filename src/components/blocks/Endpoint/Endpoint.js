@@ -3,14 +3,13 @@ import InputText from '@/ui/fields/InputText'
 import ActionButtons from '@/ui/fields/ActionButtons'
 import DropDown from '@/ui/fields/DropDown'
 import { methods } from '@/utils/http-methods'
-import styles from '@/styles/EndPoint.module.css'
 
 function Endpoint(props) {
   const { register } = props
 
   return (
     <>
-      <div className={styles.endpoint}>
+      <div className="endpoint">
         <DropDown
           data-test-id="EndpointDropDown"
           name="method"

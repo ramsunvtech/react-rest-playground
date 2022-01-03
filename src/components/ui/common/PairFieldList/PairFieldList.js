@@ -1,6 +1,5 @@
 import React from 'react'
 import { useFieldArray } from 'react-hook-form'
-import styles from '@/styles/PairFieldList.module.css'
 
 function PairFieldList(props) {
   const { name, type, control, register } = props
@@ -10,25 +9,25 @@ function PairFieldList(props) {
   })
 
   return (
-    <div className={styles.pairfield}>
+    <div data-testid="pair-field">
       {fields.map(({ id, key, value }, index) => {
         return (
           <div key={id}>
             <input
               type="text"
               defaultValue={key}
-              className={styles.textbox}
+              className="textbox"
               {...register(`${name}[${index}].key`)}
             />
             <input
               type="text"
               defaultValue={value}
-              className={styles.textbox}
+              className="textbox"
               {...register(`${name}[${index}].value`)}
             />
             <button
               type="button"
-              className={styles.removeButton}
+              className="removeButton"
               onClick={() => remove(index)}
             >
               Remove
@@ -38,7 +37,7 @@ function PairFieldList(props) {
       })}
       <button
         type="button"
-        className={styles.addButton}
+        className="addButton"
         onClick={() => append({})}
       >
         Add {type}
