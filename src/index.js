@@ -6,6 +6,8 @@ import { useForm } from 'react-hook-form'
 import useFetchApi from '@/hooks/useFetchApi'
 import convertParams from '@/utils/convert-params'
 
+import './styles/main.css'
+
 function ReactRestPlayground(props) {
   const { method, endPoint, headers, query, body, onSend } = props
   const [requestData, setRequestData] = useState({})

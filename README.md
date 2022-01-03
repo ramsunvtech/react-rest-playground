@@ -1,8 +1,10 @@
 # react-rest-playground
-Embed API Explorer in your React App as component.
+Below is the example screenshot once component `<ReactRestPlayground />` rendered.
 
 ![React Rest Playground](react-rest-playground-demo.png "React Rest Playground")
 
+
+## Implementation
 
 ```
 <ReactRestPlayground
