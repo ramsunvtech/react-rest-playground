@@ -15,8 +15,6 @@ var _DropDown = _interopRequireDefault(require("../../ui/fields/DropDown"));
 
 var _httpMethods = require("../../../utils/http-methods");
 
-var _EndPointModule = _interopRequireDefault(require("../../../styles/EndPoint.module.css"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Endpoint(props) {
@@ -24,7 +22,7 @@ function Endpoint(props) {
     register
   } = props;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
-    className: _EndPointModule.default.endpoint
+    className: "endpoint"
   }, /*#__PURE__*/_react.default.createElement(_DropDown.default, {
     "data-test-id": "EndpointDropDown",
     name: "method",
