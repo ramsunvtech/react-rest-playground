@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactHookForm = require("react-hook-form");
 
-var _PairFieldListModule = _interopRequireDefault(require("../../../../styles/PairFieldList.module.css"));
+var _blocks = require("../../../styled/blocks");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30,31 +30,25 @@ function PairFieldList(props) {
     control,
     name: name
   });
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: _PairFieldListModule.default.pairfield
-  }, fields.map(({
+  return /*#__PURE__*/_react.default.createElement(_blocks.PairFieldBlock, null, fields.map(({
     id,
     key,
     value
   }, index) => {
     return /*#__PURE__*/_react.default.createElement("div", {
       key: id
-    }, /*#__PURE__*/_react.default.createElement("input", _extends({
+    }, /*#__PURE__*/_react.default.createElement(_blocks.StyledInputField, _extends({
       type: "text",
-      defaultValue: key,
-      className: _PairFieldListModule.default.textbox
-    }, register(`${name}[${index}].key`))), /*#__PURE__*/_react.default.createElement("input", _extends({
+      defaultValue: key
+    }, register(`${name}[${index}].key`))), /*#__PURE__*/_react.default.createElement(_blocks.StyledInputField, _extends({
       type: "text",
-      defaultValue: value,
-      className: _PairFieldListModule.default.textbox
-    }, register(`${name}[${index}].value`))), /*#__PURE__*/_react.default.createElement("button", {
+      defaultValue: value
+    }, register(`${name}[${index}].value`))), /*#__PURE__*/_react.default.createElement(_blocks.StyledRemoveButton, {
       type: "button",
-      className: _PairFieldListModule.default.removeButton,
       onClick: () => remove(index)
     }, "Remove"));
-  }), /*#__PURE__*/_react.default.createElement("button", {
+  }), /*#__PURE__*/_react.default.createElement(_blocks.StyledAddButton, {
     type: "button",
-    className: _PairFieldListModule.default.addButton,
     onClick: () => append({})
   }, "Add ", type));
 }

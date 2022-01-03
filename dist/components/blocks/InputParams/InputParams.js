@@ -29,21 +29,21 @@ function InputParams(props) {
     "data-test-id": "query",
     id: "query",
     title: "Query Params"
-  }, /*#__PURE__*/_react.default.createElement("p", null, "Query Params"), /*#__PURE__*/_react.default.createElement(_QueryParams.default, {
+  }, /*#__PURE__*/_react.default.createElement(_QueryParams.default, {
     register: register,
     control: control
   })), /*#__PURE__*/_react.default.createElement(_Tabs.default.Item, {
     "data-test-id": "header",
     id: "header",
     title: "Headers"
-  }, /*#__PURE__*/_react.default.createElement("p", null, "Header Params"), /*#__PURE__*/_react.default.createElement(_HeaderParams.default, {
+  }, /*#__PURE__*/_react.default.createElement(_HeaderParams.default, {
     register: register,
     control: control
   })), /*#__PURE__*/_react.default.createElement(_Tabs.default.Item, {
     "data-test-id": "body",
     id: "body",
     title: "Body"
-  }, /*#__PURE__*/_react.default.createElement("p", null, "Body Params"), /*#__PURE__*/_react.default.createElement(_BodyParams.default, {
+  }, /*#__PURE__*/_react.default.createElement(_BodyParams.default, {
     register: register,
     control: control
   })));
