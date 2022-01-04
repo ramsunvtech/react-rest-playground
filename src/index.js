@@ -8,16 +8,22 @@ import convertParams from '@/utils/convert-params'
 import { FlexColumn, FlexRow } from '@/styled/general'
 
 function ReactRestPlayground(props) {
-  const { method, endPoint, headers, query, body, onSend } = props
+  const { initialvalues, labels = {}, onSend } = props
+  const { endpoint, parameters } = initialvalues
+  const {
+    endpoint: endpointLabel = {},
+    parameters: parametersLabel = {},
+    result: resultLabel = {},
+  } = labels
   const [requestData, setRequestData] = useState({})
   const [responseData, setResponseData] = useState({})
   const { register, handleSubmit, control } = useForm({
     defaultValues: {
-      method: method,
-      url: endPoint,
-      queryParams: query,
-      headerParams: headers,
-      bodyParams: body,
+      method: endpoint.method,
+      url: endpoint.apiUrl,
+      queryParams: parameters.query,
+      headerParams: parameters.headers,
+      bodyParams: parameters.body,
     },
   })
 
@@ -41,16 +47,25 @@ function ReactRestPlayground(props) {
       <FlexColumn>
         <FlexRow justify="center">
           <form onSubmit={handleSubmit(onSubmit)}>
-            <Endpoint data-test-id="Endpoint" register={register} />
+            <Endpoint
+              data-test-id="Endpoint"
+              register={register}
+              labels={endpointLabel}
+            />
             <InputParams
               data-test-id="InputParams"
               register={register}
               control={control}
+              labels={parametersLabel}
             />
           </form>
         </FlexRow>
         <FlexRow justify="center">
-          <Result data-test-id="Result" response={responseData} />
+          <Result
+            data-test-id="Result"
+            response={responseData}
+            labels={resultLabel}
+          />
         </FlexRow>
       </FlexColumn>
     </>

@@ -14,11 +14,11 @@ export const FlexRow = styled.div`
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
-  ${props => props.justify ? `justify-content: ${props.justify};` : ''};
+  ${(props) => (props.justify ? `justify-content: ${props.justify};` : '')};
 `
 
 export const StyledTextBox = styled.input.attrs(() => ({
-  type: 'text'
+  type: 'text',
 }))`
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -28,7 +28,6 @@ export const StyledTextBox = styled.input.attrs(() => ({
   min-width: 20rem;
   border-radius: 3px;
 `
-
 
 export const StyledDropDown = styled.select`
   padding-left: 0.5rem;

@@ -1,9 +1,14 @@
 import React from 'react'
 import { useFieldArray } from 'react-hook-form'
-import { PairFieldBlock, StyledRemoveButton, StyledInputField, StyledAddButton } from '@/styled/blocks'
+import {
+  PairFieldBlock,
+  StyledRemoveButton,
+  StyledInputField,
+  StyledAddButton,
+} from '@/styled/blocks'
 
 function PairFieldList(props) {
-  const { name, type, control, register } = props
+  const { name, type, control, register, labels } = props
   const { fields, append, remove } = useFieldArray({
     control,
     name: name,
@@ -24,20 +29,14 @@ function PairFieldList(props) {
               defaultValue={value}
               {...register(`${name}[${index}].value`)}
             />
-            <StyledRemoveButton
-              type="button"
-              onClick={() => remove(index)}
-            >
-              Remove
+            <StyledRemoveButton type="button" onClick={() => remove(index)}>
+              {labels.removeButton || 'Remove'}
             </StyledRemoveButton>
           </div>
         )
       })}
-      <StyledAddButton
-        type="button"
-        onClick={() => append({})}
-      >
-        Add {type}
+      <StyledAddButton type="button" onClick={() => append({})}>
+        {labels.addButton || `Add ${type}`}
       </StyledAddButton>
     </PairFieldBlock>
   )

@@ -6,7 +6,7 @@ import { EndpointBlock } from '@/styled/blocks'
 import { methods } from '@/utils/http-methods'
 
 function Endpoint(props) {
-  const { register } = props
+  const { register, labels } = props
 
   return (
     <>
@@ -19,11 +19,13 @@ function Endpoint(props) {
         />
         <InputText
           data-test-id="EndpointInputText"
-          placeholder="ex: http://localhost:3000/api/users"
+          placeholder={
+            labels.placeholder || 'ex: http://localhost:3000/api/users'
+          }
           name="url"
           register={register}
         />
-        <ActionButtons>Submit</ActionButtons>
+        <ActionButtons>{labels.testButton || 'Submit'}</ActionButtons>
       </EndpointBlock>
     </>
   )

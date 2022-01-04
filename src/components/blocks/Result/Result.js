@@ -4,15 +4,13 @@ import Response from '@/blocks/Result/Response'
 import { ResultBlock } from '@/styled/blocks'
 
 function Result(props) {
-  const { response = {} } = props
+  const { response = {}, labels } = props
 
   return (
     <>
       <ResultBlock>
-        <Header response={response} />
-        <Response
-          response={response}
-        />
+        <Header response={response} labels={labels} />
+        <Response response={response} />
       </ResultBlock>
     </>
   )

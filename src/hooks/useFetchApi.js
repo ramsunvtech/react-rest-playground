@@ -42,6 +42,5 @@ export default function useFetchApi(endpointData, onComplete) {
       .catch(function (error) {
         onComplete(error.response)
       })
-
   }, [api, method, onComplete, url, body, queryParams])
 }

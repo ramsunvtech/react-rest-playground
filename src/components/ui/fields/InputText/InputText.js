@@ -6,7 +6,11 @@ function InputText(props) {
 
   return (
     <>
-      <StyledTextBox value={endPoint} placeholder={placeholder} {...register(name)} />
+      <StyledTextBox
+        value={endPoint}
+        placeholder={placeholder}
+        {...register(name)}
+      />
     </>
   )
 }

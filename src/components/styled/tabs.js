@@ -6,7 +6,7 @@ export const TabList = styled.div`
   padding: 0;
   list-style: none;
 
-  &:first-child{
+  &:first-child {
     margin-left: 0;
   }
 `
@@ -19,6 +19,5 @@ const activeTabStyles = `
 export const TabListItem = styled.div`
   margin-left: 2rem;
   cursor: pointer;
-  ${props => props.isActive ? activeTabStyles : ''};
-
+  ${(props) => (props.isActive ? activeTabStyles : '')};
 `
