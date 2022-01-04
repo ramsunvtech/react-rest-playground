@@ -32,7 +32,7 @@ function Tabs(props) {
   )
 }
 
-const TabsItem = ({children}) => children;
-Tabs.Item = TabsItem;
+const TabsItem = ({ children }) => children
+Tabs.Item = TabsItem
 
 export default Tabs

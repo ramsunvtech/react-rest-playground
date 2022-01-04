@@ -2,7 +2,7 @@ import React from 'react'
 import PairFieldList from '@/ui/common/PairFieldList'
 
 function HeaderParams(props) {
-  const { control, register } = props
+  const { control, register, labels } = props
 
   return (
     <>
@@ -12,6 +12,7 @@ function HeaderParams(props) {
         type={'header'}
         register={register}
         control={control}
+        labels={labels}
       />
     </>
   )

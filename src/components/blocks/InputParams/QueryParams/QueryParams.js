@@ -2,7 +2,7 @@ import React from 'react'
 import PairFieldList from '@/ui/common/PairFieldList'
 
 function QueryParams(props) {
-  const { control, register } = props
+  const { control, register, labels } = props
 
   return (
     <>
@@ -12,6 +12,7 @@ function QueryParams(props) {
         type={'query'}
         register={register}
         control={control}
+        labels={labels}
       />
     </>
   )
