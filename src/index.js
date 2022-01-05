@@ -5,57 +5,24 @@ import Result from '@/blocks/Result'
 import { useForm } from 'react-hook-form'
 import useFetchApi from '@/hooks/useFetchApi'
 import convertParams from '@/utils/convert-params'
-import { defaultInitialValues, defaultLabels } from '@/utils/default-params'
+import overwriteDefaultParams from '@/utils/overwrite-params'
+import { noop } from '@/utils/default-params'
 import { FlexColumn, FlexRow } from '@/styled/general'
 
-const noop = () => { }
-
-function ReactRestPlayground({ initialValues = {
-  parameters: {}
-}, labels = {}, onSend = noop }) {
-  const endpoint = {
-    ...defaultInitialValues.endpoint,
-    ...initialValues.endpoint,
-  }
-  const parameters = {
-    headers: initialValues?.parameters?.headers || [],
-    query: initialValues?.parameters?.query || [],
-    body: initialValues?.parameters?.body || [],
-  }
-  const endpointLabels = {
-    ...defaultLabels.endpoint,
-    ...labels.endpoint, 
-  }
-  const parametersLabels = {
-    query: {
-      ...defaultLabels.parameters.query,
-      ...labels.endpoint?.query || {},
-    },
-    headers: {
-      ...defaultLabels.parameters.headers,
-      ...labels.endpoint?.headers || {},
-    },
-    body: {
-      ...defaultLabels.parameters.body,
-      ...labels.endpoint?.body || {},
-    }
-  }
-  const resultLabels = {
-    ...defaultLabels.result,
-    ...labels.result,
-  }
+export default function ReactRestPlayground({
+  initialValues,
+  labels,
+  onSend = noop,
+}) {
+  //Overwrite default params
+  const { defaultValues, endpointLabels, parametersLabels, resultLabels } =
+    overwriteDefaultParams({ initialValues, labels })
 
   // States.
   const [requestData, setRequestData] = useState({})
   const [responseData, setResponseData] = useState({})
   const { register, handleSubmit, control } = useForm({
-    defaultValues: {
-      method: endpoint.method,
-      url: endpoint.apiUrl,
-      queryParams: parameters.query,
-      headerParams: parameters.headers,
-      bodyParams: parameters.body,
-    },
+    defaultValues,
   })
 
   // Api call
@@ -74,33 +41,29 @@ function ReactRestPlayground({ initialValues = {
   }
 
   return (
-    <>
-      <FlexColumn>
-        <FlexRow justify="center">
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <Endpoint
-              data-test-id="Endpoint"
-              register={register}
-              labels={endpointLabels}
-            />
-            <InputParams
-              data-test-id="InputParams"
-              register={register}
-              control={control}
-              labels={parametersLabels}
-            />
-          </form>
-        </FlexRow>
-        <FlexRow justify="center">
-          <Result
-            data-test-id="Result"
-            response={responseData}
-            labels={resultLabels}
+    <FlexColumn>
+      <FlexRow justify="center">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <Endpoint
+            data-test-id="Endpoint"
+            register={register}
+            labels={endpointLabels}
           />
-        </FlexRow>
-      </FlexColumn>
-    </>
+          <InputParams
+            data-test-id="InputParams"
+            register={register}
+            control={control}
+            labels={parametersLabels}
+          />
+        </form>
+      </FlexRow>
+      <FlexRow justify="center">
+        <Result
+          data-test-id="Result"
+          response={responseData}
+          labels={resultLabels}
+        />
+      </FlexRow>
+    </FlexColumn>
   )
 }
-
-export default ReactRestPlayground
