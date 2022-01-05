@@ -3,7 +3,6 @@ Below is the example screenshot once component `<ReactRestPlayground />` rendere
 
 ![React Rest Playground](react-rest-playground-demo.png "React Rest Playground")
 
-
 ## Implementation
 
 ```

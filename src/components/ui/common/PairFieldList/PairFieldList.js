@@ -8,7 +8,7 @@ import {
 } from '@/styled/blocks'
 
 function PairFieldList(props) {
-  const { name, type, control, register, labels } = props
+  const { name, control, register, labels } = props
   const { fields, append, remove } = useFieldArray({
     control,
     name: name,
@@ -30,13 +30,13 @@ function PairFieldList(props) {
               {...register(`${name}[${index}].value`)}
             />
             <StyledRemoveButton type="button" onClick={() => remove(index)}>
-              {labels.removeButton || 'Remove'}
+              {labels.removeButton}
             </StyledRemoveButton>
           </div>
         )
       })}
       <StyledAddButton type="button" onClick={() => append({})}>
-        {labels.addButton || `Add ${type}`}
+        {labels.addButton}
       </StyledAddButton>
     </PairFieldBlock>
   )

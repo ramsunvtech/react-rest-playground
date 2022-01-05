@@ -5,16 +5,47 @@ import Result from '@/blocks/Result'
 import { useForm } from 'react-hook-form'
 import useFetchApi from '@/hooks/useFetchApi'
 import convertParams from '@/utils/convert-params'
+import { defaultInitialValues, defaultLabels } from '@/utils/default-params'
 import { FlexColumn, FlexRow } from '@/styled/general'
 
-function ReactRestPlayground(props) {
-  const { initialvalues, labels = {}, onSend } = props
-  const { endpoint, parameters } = initialvalues
-  const {
-    endpoint: endpointLabel = {},
-    parameters: parametersLabel = {},
-    result: resultLabel = {},
-  } = labels
+const noop = () => { }
+
+function ReactRestPlayground({ initialValues = {
+  parameters: {}
+}, labels = {}, onSend = noop }) {
+  const endpoint = {
+    ...defaultInitialValues.endpoint,
+    ...initialValues.endpoint,
+  }
+  const parameters = {
+    headers: initialValues?.parameters?.headers || [],
+    query: initialValues?.parameters?.query || [],
+    body: initialValues?.parameters?.body || [],
+  }
+  const endpointLabels = {
+    ...defaultLabels.endpoint,
+    ...labels.endpoint, 
+  }
+  const parametersLabels = {
+    query: {
+      ...defaultLabels.parameters.query,
+      ...labels.endpoint?.query || {},
+    },
+    headers: {
+      ...defaultLabels.parameters.headers,
+      ...labels.endpoint?.headers || {},
+    },
+    body: {
+      ...defaultLabels.parameters.body,
+      ...labels.endpoint?.body || {},
+    }
+  }
+  const resultLabels = {
+    ...defaultLabels.result,
+    ...labels.result,
+  }
+
+  // States.
   const [requestData, setRequestData] = useState({})
   const [responseData, setResponseData] = useState({})
   const { register, handleSubmit, control } = useForm({
@@ -50,13 +81,13 @@ function ReactRestPlayground(props) {
             <Endpoint
               data-test-id="Endpoint"
               register={register}
-              labels={endpointLabel}
+              labels={endpointLabels}
             />
             <InputParams
               data-test-id="InputParams"
               register={register}
               control={control}
-              labels={parametersLabel}
+              labels={parametersLabels}
             />
           </form>
         </FlexRow>
@@ -64,7 +95,7 @@ function ReactRestPlayground(props) {
           <Result
             data-test-id="Result"
             response={responseData}
-            labels={resultLabel}
+            labels={resultLabels}
           />
         </FlexRow>
       </FlexColumn>
