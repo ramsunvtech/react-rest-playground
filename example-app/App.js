@@ -10,47 +10,22 @@ import '../src/styles/main.css'
 // Props.
 const methodType = 'get'
 const apiUrl = 'https://jsonplaceholder.typicode.com/todos/1'
-const headerDetails = [{ key: 'Auth', value: '1234' }]
-const queryParamDetails = [{ key: 'title', value: 'test title' }]
-const bodyDetails = [{ key: 'title', value: 'test title' }, { key: 'body', value: 'test body' }, { key: 'userId', value: 1 }]
 const onSend = (payload) => { console.log(payload) }
 
-const initialvalues = {
+const initialValues = {
   endpoint: {
     method: methodType,
     apiUrl: apiUrl,
-  },
-  parameters: {
-    headers: headerDetails,
-    query: queryParamDetails,
-    body: bodyDetails
   }
 }
 
 const labels = {
   endpoint: {
-    placeholder: 'http://localhost:8080/auth',
-    testButton: 'test',
-  },
-  parameters: {
-    query: {
-      tabTitle: 'Query',
-      addButton: 'Add Query',
-      removeButton: 'Remove Query',
-    },
-    headers: {
-      tabTitle: 'Headers',
-      addButton: 'Add Header',
-      removeButton: 'Remove Header',
-    },
-    body: {
-      tabTitle: 'Body',
-      addButton: 'Add Body',
-      removeButton: 'Remove Body',
-    }
+    placeholder: 'http://www.site.com/auth',
+    testButton: 'Test Now',
   },
   result: {
-    status: 'Status'
+    status: 'Response Status'
   }
 }
 
@@ -59,7 +34,7 @@ function App() {
     <>
       <ErrorHandler>
         <ReactRestPlayground
-          initialvalues={initialvalues}
+          initialValues={initialValues}
           labels={labels}
           onSend={onSend}
         />

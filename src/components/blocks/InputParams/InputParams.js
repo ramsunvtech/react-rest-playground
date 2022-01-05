@@ -8,11 +8,7 @@ function InputParams(props) {
   const {
     register,
     control,
-    labels: {
-      query: queryLabel = {},
-      headers: headerLabel = {},
-      body: bodyLabel = {},
-    },
+    labels,
   } = props
 
   return (
@@ -20,31 +16,31 @@ function InputParams(props) {
       <Tabs.Item
         data-test-id="query"
         id="query"
-        title={queryLabel.tabTitle || 'Query Params'}
+        title={labels?.query?.tabTitle}
       >
         <QueryParams
           register={register}
           control={control}
-          labels={queryLabel}
+          labels={labels?.query}
         />
       </Tabs.Item>
       <Tabs.Item
         data-test-id="header"
         id="header"
-        title={headerLabel.tabTitle || 'Headers'}
+        title={labels?.headers?.tabTitle}
       >
         <HeaderParams
           register={register}
           control={control}
-          labels={headerLabel}
+          labels={labels?.headers}
         />
       </Tabs.Item>
       <Tabs.Item
         data-test-id="body"
         id="body"
-        title={bodyLabel.tabTitle || 'Body'}
+        title={labels?.body?.tabTitle}
       >
-        <BodyParams register={register} control={control} labels={bodyLabel} />
+        <BodyParams register={register} control={control} labels={labels?.body} />
       </Tabs.Item>
     </Tabs>
   )

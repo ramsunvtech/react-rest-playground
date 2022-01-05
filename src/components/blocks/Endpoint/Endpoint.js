@@ -20,12 +20,12 @@ function Endpoint(props) {
         <InputText
           data-test-id="EndpointInputText"
           placeholder={
-            labels.placeholder || 'ex: http://localhost:3000/api/users'
+            labels.placeholder
           }
           name="url"
           register={register}
         />
-        <ActionButtons>{labels.testButton || 'Submit'}</ActionButtons>
+        <ActionButtons>{labels.testButton}</ActionButtons>
       </EndpointBlock>
     </>
   )
