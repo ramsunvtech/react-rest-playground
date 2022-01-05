@@ -8,8 +8,8 @@ export const defaultInitialValues = {
   parameters: {
     headers: [],
     query: [],
-    body: []
-  }
+    body: [],
+  },
 }
 
 export const defaultLabels = {
@@ -32,9 +32,11 @@ export const defaultLabels = {
       tabTitle: 'Body',
       addButton: 'Add Body',
       removeButton: 'Remove Body',
-    }
+    },
   },
   result: {
-    status: 'Status'
-  }
+    status: 'Status',
+  },
 }
+
+export const noop = () => {}
