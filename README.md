@@ -6,15 +6,30 @@ Below is the example screenshot once component `<ReactRestPlayground />` rendere
 ## Implementation
 
 ```
+const initialValues = {
+  endpoint: {
+    method: methodType,
+    apiUrl: apiUrl,
+  }
+}
+
+const labels = {
+  endpoint: {
+    placeholder: 'http://www.site.com/auth',
+    testButton: 'Test Now',
+  },
+  result: {
+    status: 'Response Status'
+  }
+}
+
 <ReactRestPlayground
-  method={methodType}
-  endPoint={apiUrl}
-  headers={headerDetails}
-  query={queryParamDetails}
-  body={bodyDetails}
-  onSend={() => {}}
+  initialValues={initialValues}
+  labels={labels}
+  onSend={onSend}
 />
 ```
+
 
 ## Demo
 1. In React Project - https://codesandbox.io/s/react-rest-playground-example-in-react-js-project-d18zu
