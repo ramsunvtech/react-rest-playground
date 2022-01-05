@@ -15,6 +15,7 @@ module.exports = {
     '@babel/preset-react'
   ],
   plugins: [
+    ['@babel/plugin-proposal-optional-chaining'],
     ['module-resolver', {
       alias: {
         '@/blocks': getAliasPath('components/blocks'),
