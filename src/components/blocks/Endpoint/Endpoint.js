@@ -10,7 +10,7 @@ function Endpoint(props) {
 
   return (
     <>
-      <EndpointBlock>
+      <EndpointBlock className="rpg-endpoint-block">
         <DropDown
           data-test-id="EndpointDropDown"
           name="method"
@@ -19,9 +19,7 @@ function Endpoint(props) {
         />
         <InputText
           data-test-id="EndpointInputText"
-          placeholder={
-            labels.placeholder
-          }
+          placeholder={labels.placeholder}
           name="url"
           register={register}
         />

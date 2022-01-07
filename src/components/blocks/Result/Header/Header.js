@@ -4,11 +4,9 @@ function Header(props) {
   const { response = {}, labels } = props
 
   return (
-    <>
-      <div data-testid="status">
-        {labels.status}: {JSON.stringify(response.status)}
-      </div>
-    </>
+    <div className="rpg-result-header" data-testid="status">
+      {labels.status}: {JSON.stringify(response.status)}
+    </div>
   )
 }
 

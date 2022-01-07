@@ -10,8 +10,8 @@ function Tabs(props) {
   }
 
   return (
-    <div data-testid="tabs">
-      <TabList>
+    <div data-testid="tabs" className="rpg-tabs">
+      <TabList className="rpg-tab-list">
         {children.map(({ props: { id, title } }, tabIndex) => (
           <TabListItem
             key={id}
@@ -20,12 +20,13 @@ function Tabs(props) {
             onClick={() => {
               onChangeTabEvent(tabIndex)
             }}
+            className="rpg-tab-item"
           >
             {title}
           </TabListItem>
         ))}
       </TabList>
-      <div data-testid="tab-content">
+      <div data-testid="tab-content" className="rpg-tab-content">
         {children.length > 0 && children[activeTabIndex]}
       </div>
     </div>

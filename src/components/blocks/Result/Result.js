@@ -7,12 +7,10 @@ function Result(props) {
   const { response = {}, labels } = props
 
   return (
-    <>
-      <ResultBlock>
-        <Header response={response} labels={labels} />
-        <Response response={response} />
-      </ResultBlock>
-    </>
+    <ResultBlock>
+      <Header response={response} labels={labels} />
+      <Response response={response} />
+    </ResultBlock>
   )
 }
 
