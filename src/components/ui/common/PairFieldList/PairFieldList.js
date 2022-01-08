@@ -15,7 +15,7 @@ function PairFieldList(props) {
   })
 
   return (
-    <PairFieldBlock>
+    <PairFieldBlock className="rpg-pair-field-block">
       {fields.map(({ id, key, value }, index) => {
         return (
           <div key={id}>
@@ -23,13 +23,19 @@ function PairFieldList(props) {
               type="text"
               defaultValue={key}
               {...register(`${name}[${index}].key`)}
+              className="rpg-pair-field-input"
             />
             <StyledInputField
               type="text"
               defaultValue={value}
               {...register(`${name}[${index}].value`)}
+              className="rpg-pair-field-input"
             />
-            <StyledRemoveButton type="button" onClick={() => remove(index)}>
+            <StyledRemoveButton
+              type="button"
+              onClick={() => remove(index)}
+              className="rpg-remove-btn"
+            >
               {labels.removeButton}
             </StyledRemoveButton>
           </div>

@@ -3,9 +3,9 @@ import React from 'react'
 function ActionButtons(props) {
   const { children } = props
   return (
-    <>
-      <button type="submit">{children}</button>
-    </>
+    <button type="submit" className="rpg-submit-btn">
+      {children}
+    </button>
   )
 }
 

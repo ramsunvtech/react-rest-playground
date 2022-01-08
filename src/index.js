@@ -13,6 +13,7 @@ export default function ReactRestPlayground({
   initialValues,
   labels,
   onSend = noop,
+  className,
 }) {
   //Overwrite default params
   const { defaultValues, endpointLabels, parametersLabels, resultLabels } =
@@ -41,9 +42,9 @@ export default function ReactRestPlayground({
   }
 
   return (
-    <FlexColumn>
-      <FlexRow justify="center">
-        <form onSubmit={handleSubmit(onSubmit)}>
+    <FlexColumn className={className}>
+      <FlexRow className="rpg-row" justify="center">
+        <form className="rpg-form" onSubmit={handleSubmit(onSubmit)}>
           <Endpoint
             data-test-id="Endpoint"
             register={register}
@@ -57,7 +58,7 @@ export default function ReactRestPlayground({
           />
         </form>
       </FlexRow>
-      <FlexRow justify="center">
+      <FlexRow className="rpg-result-row" justify="center">
         <Result
           data-test-id="Result"
           response={responseData}
