@@ -5,11 +5,11 @@ function Response(props) {
   const { response = {} } = props
 
   return (
-    <div className="rpg-response" data-testid="response-editor">
+    <div className="rpg-block-response" data-testid="response-editor">
       <CodeEditor
-        name={'responseEditor'}
+        name="responseEditor"
         data={response.data}
-        height={'300px'}
+        height={300}
         readOnly
       />
     </div>

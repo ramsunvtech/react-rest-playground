@@ -43,7 +43,7 @@ export default function ReactRestPlayground({
 
   return (
     <FlexColumn className={className}>
-      <FlexRow className="rpg-row-1" justify="center">
+      <FlexRow className="rpg-row" justify="center">
         <form className="rpg-form" onSubmit={handleSubmit(onSubmit)}>
           <Endpoint
             data-test-id="Endpoint"
@@ -58,7 +58,7 @@ export default function ReactRestPlayground({
           />
         </form>
       </FlexRow>
-      <FlexRow className="rpg-row-1" justify="center">
+      <FlexRow className="rpg-result-row" justify="center">
         <Result
           data-test-id="Result"
           response={responseData}

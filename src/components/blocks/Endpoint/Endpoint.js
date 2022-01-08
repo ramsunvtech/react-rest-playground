@@ -10,7 +10,7 @@ function Endpoint(props) {
 
   return (
     <>
-      <EndpointBlock className="rpg-endpoint-block">
+      <EndpointBlock className="rpg-block-endpoint">
         <DropDown
           data-test-id="EndpointDropDown"
           name="method"
