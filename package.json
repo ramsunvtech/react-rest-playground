@@ -14,7 +14,9 @@
     "build:declaration": "npx -p typescript tsc src/**/*.js --declaration --allowJs --emitDeclarationOnly --outDir types",
     "lint": "npx eslint --fix .",
     "format": "npx prettier --check src/**/*.js",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "keywords": [
     "react",
@@ -54,6 +56,10 @@
     "@babel/plugin-proposal-optional-chaining": "^7.16.7",
     "@babel/preset-env": "^7.16.5",
     "@babel/preset-react": "^7.16.5",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/react": "^6.4.9",
     "@svgr/webpack": "^6.1.2",
     "babel-loader": "^8.2.3",
     "babel-plugin-module-resolver": "^4.1.0",
